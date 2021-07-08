@@ -1,0 +1,24 @@
+const conditionalSum = (values, condition) => {
+    let total = 0;
+
+    if (condition === 'odd') {
+        for (let value of values) {
+            if (value % 2 === 1 || value % 2 === -1) {
+                total += value;
+            }
+        }
+    } else if (condition === 'even') {
+        for (let value of values) {
+            if (value % 2 === 0) {
+                total += value;
+            }
+        }
+    }
+
+    return total;
+}
+
+console.log(conditionalSum([1, 2, 3, 4, 5], "even"));
+console.log(conditionalSum([1, 2, 3, 4, 5], "odd"));
+console.log(conditionalSum([13, 88, 12, 44, 99], "even"));
+console.log(conditionalSum([], "odd"));
